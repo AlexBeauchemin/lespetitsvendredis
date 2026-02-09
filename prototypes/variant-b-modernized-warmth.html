@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rose | Les petits vendredis</title>
+<meta name="description" content="Voici les petites histoires farfelues du vendredi de Sylvie Lafleur">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&family=Norican&display=swap" rel="stylesheet">
+<style>
+/* === VARIANT B: MODERNIZED WARMTH === */
+/* Same spirit as original, cleaner modern execution */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-blush: #f0ddd9;
+  --color-rose: #c97b73;
+  --color-rose-dark: #a85f57;
+  --color-sage: #7aab9e;
+  --color-sage-light: #d4e5e0;
+  --color-cream: #faf6ee;
+  --color-text: #3d3d3d;
+  --color-text-light: #6b6b6b;
+}
+
+html {
+  background-color: var(--color-blush);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--color-text);
+  background: var(--color-cream);
+}
+
+a {
+  color: var(--color-rose);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-rose-dark);
+}
+
+/* --- Header --- */
+.site-header {
+  text-align: center;
+  padding: 50px 20px 40px;
+  border-bottom: 1px solid var(--color-blush);
+}
+
+.site-title {
+  font-family: 'Norican', cursive;
+  font-size: 48px;
+  font-weight: normal;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.site-title a {
+  color: var(--color-rose);
+}
+
+.site-title a:hover {
+  color: var(--color-rose-dark);
+}
+
+.site-description {
+  font-family: 'Lora', Georgia, serif;
+  font-style: italic;
+  color: var(--color-text-light);
+  font-size: 15px;
+}
+
+/* --- Main Layout --- */
+.site-wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --- Article --- */
+.post {
+  padding: 50px 0 40px;
+}
+
+.entry-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.entry-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+
+.entry-meta {
+  display: inline-block;
+  background-color: var(--color-sage-light);
+  color: var(--color-sage);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.02em;
+}
+
+.entry-content {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.entry-content p {
+  margin-bottom: 28px;
+}
+
+.entry-content em {
+  color: var(--color-text-light);
+}
+
+.entry-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 35px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* --- Post Navigation --- */
+.post-navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+  border-top: 1px solid var(--color-blush);
+  border-bottom: 1px solid var(--color-blush);
+  font-size: 14px;
+}
+
+.post-navigation a {
+  color: var(--color-text-light);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.post-navigation a:hover {
+  color: var(--color-rose);
+}
+
+.nav-prev {
+  text-align: left;
+}
+
+.nav-next {
+  text-align: right;
+}
+
+/* --- Comments --- */
+.comments-section {
+  padding: 40px 0;
+}
+
+.comments-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+.comment {
+  background: var(--color-blush);
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-bottom: 12px;
+}
+
+.comment-author {
+  font-weight: 600;
+  color: var(--color-rose-dark);
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.comment-content {
+  font-size: 15px;
+  color: var(--color-text);
+}
+
+/* --- Author Box --- */
+.author-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background: linear-gradient(135deg, var(--color-blush) 0%, var(--color-cream) 100%);
+  border-radius: 16px;
+  padding: 24px;
+  margin: 40px 0;
+}
+
+.author-box img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.author-box-content h4 {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--color-text);
+}
+
+.author-box-content p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-text-light);
+}
+
+/* --- Footer --- */
+.site-footer {
+  background-color: var(--color-blush);
+  margin-top: 20px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.footer-title {
+  font-family: 'Norican', cursive;
+  font-size: 24px;
+  color: var(--color-rose);
+  margin-bottom: 8px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.footer-links a {
+  font-size: 13px;
+  color: var(--color-text-light);
+}
+
+.footer-links a:hover {
+  color: var(--color-rose);
+}
+
+.footer-copyright {
+  font-size: 12px;
+  color: var(--color-text-light);
+  margin-top: 20px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  .site-header {
+    padding: 35px 20px 30px;
+  }
+  .site-title {
+    font-size: 36px;
+  }
+  .entry-title {
+    font-size: 28px;
+  }
+  .entry-content {
+    font-size: 16px;
+  }
+  .post {
+    padding: 35px 0 30px;
+  }
+  .author-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .post-navigation {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .nav-next {
+    text-align: left;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <h1 class="site-title"><a href="/">Les petits vendredis</a></h1>
+  <p class="site-description">Par Sylvie Lafleur</p>
+</header>
+
+<!-- MAIN -->
+<div class="site-wrapper">
+  <article class="post">
+    <header class="entry-header">
+      <h1 class="entry-title">Rose</h1>
+      <span class="entry-meta">23 decembre 2016</span>
+    </header>
+
+    <div class="entry-content">
+      <p>Rose est le reve d'une femme. Vous savez le genre de femme qui est belle et qui ne le sait pas, une femme sans artifice, mysterieuse, qui aime la vie, la provoque et ... la vie. Voici l'histoire "vraie" d'une certaine Rose!</p>
+
+      <p>Rose c'est une fleur, une couleur, une odeur ainsi qu'un magnifique prenom. Mais avant tout Rose est un cadeau.</p>
+
+      <p>Alors voila: Rose est arrivee dix-sept ans apres son premier frere (elle en a trois et oui trois et du meme pere en plus, chose presque trop rare de nous jours).</p>
+
+      <p>Un jour, papa Rose demande a maman Rose: <em>"Qu'elle est ton reve? Jusqu'a present moi j'ai realise les miens, alors j'aimerais t'aider a realiser un reve."</em></p>
+
+      <p>Deja cette partie m'a touche, wow, quel homme! Toujours est-il que maman Rose avoue qu'il ne lui manque qu'un tout petit quelque chose pour etre parfaitement comble ... un autre enfant! Et oui, malgre l'age, la distance le separant des autres, et peu importe si c'est encore un petit garcon, le plus grand reve de maman Rose est d'avoir un autre enfant, un dernier, un cadeau.</p>
+
+      <p>Avec beaucoup de patience, de volonte et apres plusieurs tentatives, maman Rose a provoque la vie, l'a bouscule, un peu traumatise meme et finalement est arrivee une Rose. Une douce, precieuse et oh combien desiree petite creature.</p>
+
+      <p>Rose sera la conclusion, car maman y a investi toute sa determination. Comme quoi il ne faut jamais abandonner ses reves, il faut les dire et quelquefois se faire aider pour les realiser, mais il ne faut jamais laisser tomber!</p>
+
+      <img src="images/rose.jpg" alt="Rose">
+    </div>
+  </article>
+
+  <!-- Author Box -->
+  <div class="author-box">
+    <img src="images/sylvie.jpg" alt="Sylvie Lafleur">
+    <div class="author-box-content">
+      <h4>Sylvie Lafleur</h4>
+      <p>Femme ordinaire, mere qui s'est bien tiree d'affaire, folle a temps partiel ayant un esprit tres frivole et des idees plus farfelues les unes que les autres.</p>
+    </div>
+  </div>
+
+  <!-- Post Navigation -->
+  <nav class="post-navigation">
+    <a href="/les-imparfaites/" class="nav-prev">&larr; Les imparfaites</a>
+    <a href="/2017-la-femme/" class="nav-next">2017 ... La femme &rarr;</a>
+  </nav>
+
+  <!-- Comments -->
+  <section class="comments-section">
+    <h3 class="comments-title">1 commentaire</h3>
+    <div class="comment">
+      <div class="comment-author">sophie</div>
+      <div class="comment-content">&lt;3</div>
+    </div>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-title">Les petits vendredis</div>
+    <div class="footer-links">
+      <a href="/">Accueil</a>
+      <a href="/le-geant-a-deux-tetes/">Le geant a deux tetes</a>
+      <a href="/mon-affaissement/">Mon affaissement</a>
+      <a href="/les-imparfaites/">Les imparfaites</a>
+      <a href="/le-secret/">Le secret</a>
+    </div>
+    <p class="footer-copyright">Les petites histoires du vendredi de Sylvie Lafleur</p>
+  </div>
+</footer>
+
+</body>
+</html>

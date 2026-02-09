@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lespetitsvendredis.com/sitemap.xml

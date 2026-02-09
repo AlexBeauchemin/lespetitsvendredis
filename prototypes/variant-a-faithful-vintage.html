@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rose | Les petits vendredis</title>
+<meta name="description" content="Voici les petites histoires farfelues du vendredi de Sylvie Lafleur">
+<link href="https://fonts.googleapis.com/css2?family=Norican&display=swap" rel="stylesheet">
+<style>
+/* === VARIANT A: FAITHFUL VINTAGE === */
+/* Recreates the original WordPress theme look with clean static CSS */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #eac4c1;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background: #f4f1db;
+}
+
+a {
+  color: #cd736b;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b85a52;
+  text-decoration: underline;
+}
+
+/* --- Header / Branding --- */
+.site-header {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+.header-frame {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 50px 40px 40px;
+  border: 3px solid #cd736b;
+  border-radius: 8px;
+  position: relative;
+  background: rgba(244, 241, 219, 0.5);
+}
+
+.header-frame::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  border: 1px solid #cd736b;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+.site-title {
+  font-family: 'Norican', cursive;
+  font-size: 60px;
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+.site-title a {
+  color: #cd736b;
+}
+
+.site-title a:hover {
+  text-decoration: none;
+  color: #b85a52;
+}
+
+.site-description {
+  font-style: italic;
+  color: #cd736b;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+/* --- Layout --- */
+.site-wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 25px 20px 0;
+  display: flex;
+  gap: 30px;
+}
+
+/* --- Main Content --- */
+.content-area {
+  flex: 1;
+  min-width: 0;
+  background-color: #fff;
+  box-shadow: inset 0 0 0 4px #e9e5cb;
+}
+
+.post {
+  padding: 25px 30px;
+  position: relative;
+}
+
+.entry-title {
+  font-family: 'Norican', cursive;
+  font-size: 40px;
+  font-weight: normal;
+  line-height: 1.2;
+  color: #5da6a6;
+  margin-bottom: 5px;
+}
+
+.entry-title a {
+  color: #5da6a6;
+}
+
+.entry-meta {
+  font-family: 'Norican', cursive;
+  font-size: 18px;
+  color: #cd736b;
+  margin-bottom: 15px;
+}
+
+.entry-content {
+  padding-top: 10px;
+}
+
+.entry-content p {
+  margin-bottom: 24px;
+}
+
+.entry-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+.entry-content figcaption {
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+  margin-top: 5px;
+}
+
+.entry-utility {
+  color: #777;
+  font-size: 12px;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #e9e5cb;
+}
+
+/* --- Post Navigation --- */
+.post-navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px 25px;
+  font-size: 14px;
+}
+
+.post-navigation a {
+  color: #777;
+}
+
+.post-navigation a:hover {
+  color: #cd736b;
+}
+
+/* --- Comments --- */
+.comments-section {
+  padding: 0 30px 30px;
+}
+
+.comments-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-top: 1px solid #e9e5cb;
+  padding-top: 20px;
+}
+
+.comment {
+  border-bottom: 1px solid #e7e7e7;
+  padding: 15px 0;
+  line-height: 1.5;
+}
+
+.comment:last-child {
+  border-bottom: none;
+}
+
+.comment-author {
+  font-weight: bold;
+  color: #000;
+  font-size: 14px;
+}
+
+.comment-content {
+  margin-top: 6px;
+  font-size: 15px;
+  color: #444;
+}
+
+/* --- Sidebar --- */
+.sidebar {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+.widget {
+  margin-bottom: 20px;
+}
+
+.widget-title {
+  background-color: #a8d3dd;
+  border-radius: 5px;
+  border: 2px dashed #5da6a6;
+  color: #555;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.widget-about {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.widget-about img {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #e9e5cb;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.widget-about p {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.widget ul {
+  list-style: none;
+  padding: 0;
+}
+
+.widget ul li {
+  font-size: 13px;
+  padding: 3px 0;
+}
+
+.widget ul li a {
+  color: #cd736b;
+}
+
+/* --- Footer --- */
+.site-footer {
+  background-color: #eac4c1;
+  margin-top: 30px;
+  border-top: 4px solid #cd736b;
+}
+
+.footer-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.footer-inner a {
+  color: #cd736b;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .site-wrapper {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: inset 0 0 0 4px #e9e5cb;
+    padding: 20px;
+  }
+  .site-title {
+    font-size: 36px;
+  }
+  .header-frame {
+    padding: 30px 20px 25px;
+  }
+  .entry-title {
+    font-size: 30px;
+  }
+  .post {
+    padding: 20px;
+  }
+  .post-navigation {
+    padding: 15px 20px 20px;
+  }
+  .comments-section {
+    padding: 0 20px 20px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-frame">
+    <h1 class="site-title"><a href="/">Les petits vendredis</a></h1>
+    <p class="site-description">Par Sylvie Lafleur</p>
+  </div>
+</header>
+
+<!-- MAIN LAYOUT -->
+<div class="site-wrapper">
+
+  <!-- CONTENT -->
+  <main class="content-area">
+    <!-- Post Navigation (top) -->
+    <nav class="post-navigation">
+      <span><a href="/les-imparfaites/">&larr; Les imparfaites</a></span>
+      <span><a href="/2017-la-femme/">2017 ... La femme &rarr;</a></span>
+    </nav>
+
+    <article class="post">
+      <h1 class="entry-title">Rose</h1>
+      <div class="entry-meta">23 decembre 2016</div>
+
+      <div class="entry-content">
+        <p>Rose est le reve d'une femme. Vous savez le genre de femme qui est belle et qui ne le sait pas, une femme sans artifice, mysterieuse, qui aime la vie, la provoque et ... la vie. Voici l'histoire "vraie" d'une certaine Rose!</p>
+
+        <p>Rose c'est une fleur, une couleur, une odeur ainsi qu'un magnifique prenom. Mais avant tout Rose est un cadeau.</p>
+
+        <p>Alors voila: Rose est arrivee dix-sept ans apres son premier frere (elle en a trois et oui trois et du meme pere en plus, chose presque trop rare de nous jours).</p>
+
+        <p>Un jour, papa Rose demande a maman Rose: <em>"Qu'elle est ton reve? Jusqu'a present moi j'ai realise les miens, alors j'aimerais t'aider a realiser un reve."</em></p>
+
+        <p>Deja cette partie m'a touche, wow, quel homme! Toujours est-il que maman Rose avoue qu'il ne lui manque qu'un tout petit quelque chose pour etre parfaitement comble ... un autre enfant! Et oui, malgre l'age, la distance le separant des autres, et peu importe si c'est encore un petit garcon, le plus grand reve de maman Rose est d'avoir un autre enfant, un dernier, un cadeau.</p>
+
+        <p>Avec beaucoup de patience, de volonte et apres plusieurs tentatives, maman Rose a provoque la vie, l'a bouscule, un peu traumatise meme et finalement est arrivee une Rose. Une douce, precieuse et oh combien desiree petite creature.</p>
+
+        <p>Rose sera la conclusion, car maman y a investi toute sa determination. Comme quoi il ne faut jamais abandonner ses reves, il faut les dire et quelquefois se faire aider pour les realiser, mais il ne faut jamais laisser tomber!</p>
+
+        <figure>
+          <img src="images/rose.jpg" alt="Rose">
+        </figure>
+      </div>
+
+      <div class="entry-utility">
+        Publie dans Non classe
+      </div>
+    </article>
+
+    <!-- Comments -->
+    <section class="comments-section">
+      <h3 class="comments-title">1 commentaire</h3>
+      <div class="comment">
+        <span class="comment-author">sophie</span>
+        <div class="comment-content">&lt;3</div>
+      </div>
+    </section>
+
+    <!-- Post Navigation (bottom) -->
+    <nav class="post-navigation">
+      <span><a href="/les-imparfaites/">&larr; Les imparfaites</a></span>
+      <span><a href="/2017-la-femme/">2017 ... La femme &rarr;</a></span>
+    </nav>
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="widget">
+      <div class="widget-about">
+        <img src="images/sylvie.jpg" alt="Sylvie Lafleur">
+        <p>Sylvie Lafleur: femme ordinaire, mere qui s'est bien tiree d'affaire, folle a temps partiel ayant un esprit tres frivole et des idees plus farfelues les unes que les autres.</p>
+      </div>
+    </div>
+
+    <div class="widget">
+      <h3 class="widget-title">Articles recents</h3>
+      <ul>
+        <li><a href="/le-geant-a-deux-tetes/">Le geant a deux tetes</a></li>
+        <li><a href="/mon-affaissement/">Mon affaissement</a></li>
+        <li><a href="/le-mot-de-trop/">Le mot de trop</a></li>
+        <li><a href="/le-temps-dun-virus/">Le temps d'un virus</a></li>
+        <li><a href="/choisir-de-vieillir/">Choisir de vieillir</a></li>
+      </ul>
+    </div>
+
+    <div class="widget">
+      <h3 class="widget-title">Populaires</h3>
+      <ul>
+        <li><a href="/le-secret/">Le secret</a></li>
+        <li><a href="/lhistoire-du-barbu/">L'histoire du barbu</a></li>
+        <li><a href="/le-geant-a-deux-tetes/">Le geant a deux tetes</a></li>
+        <li><a href="/les-imparfaites/">Les imparfaites</a></li>
+        <li><a href="/le-mot-de-trop/">Le mot de trop</a></li>
+      </ul>
+    </div>
+  </aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <a href="/">Les petits vendredis</a> &mdash; Par Sylvie Lafleur
+  </div>
+</footer>
+
+</body>
+</html>

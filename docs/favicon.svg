@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <text y="0.9em" font-size="80" text-anchor="middle" x="50">V</text>
+  <style>
+    text {
+      font-family: Georgia, 'Playfair Display', serif;
+      fill: #c4836a;
+      font-style: italic;
+    }
+  </style>
+</svg>

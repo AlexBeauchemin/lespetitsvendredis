@@ -6,15 +6,15 @@ const server = Bun.serve({
     // Default to index.html for directory paths
     if (path.endsWith("/")) path += "index.html";
 
-    const file = Bun.file(`./site${path}`);
+    const file = Bun.file(`./docs${path}`);
     if (await file.exists()) return new Response(file);
 
     // Try adding /index.html for clean URLs
-    const dirFile = Bun.file(`./site${path}/index.html`);
+    const dirFile = Bun.file(`./docs${path}/index.html`);
     if (await dirFile.exists()) return new Response(dirFile);
 
     // 404
-    const notFound = Bun.file("./site/404.html");
+    const notFound = Bun.file("./docs/404.html");
     return new Response(notFound, { status: 404 });
   },
 });
